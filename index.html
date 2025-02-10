@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Typing Test</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Speed Typing Test</h1>
+        
+        <div class="test-container">
+            <div class="difficulty-selector">
+                <button class="difficulty-btn" data-difficulty="easy">Easy</button>
+                <button class="difficulty-btn" data-difficulty="medium">Medium</button>
+                <button class="difficulty-btn" data-difficulty="hard">Hard</button>
+            </div>
+
+            <div class="time-selector">
+                <button class="time-btn" data-time="60">1 min</button>
+                <button class="time-btn" data-time="120">2 min</button>
+                <button class="time-btn" data-time="300">5 min</button>
+                <button class="time-btn" data-time="600">10 min</button>
+                <button class="time-btn" data-time="900">15 min</button>
+            </div>
+
+            <div class="stats-container">
+                <div class="stat">
+                    <span class="stat-label">Time:</span>
+                    <span id="time">0s</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-label">WPM:</span>
+                    <span id="wpm">0</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-label">Accuracy:</span>
+                    <span id="accuracy">100%</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-label">Errors:</span>
+                    <span id="errors">0</span>
+                </div>
+            </div>
+
+            <div class="text-display" id="textDisplay"></div>
+            <div class="input-area">
+                <textarea id="textInput" placeholder="Start typing here..." disabled></textarea>
+            </div>
+
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+
+            <div class="controls">
+                <button id="startBtn" class="control-btn">Start Test</button>
+                <button id="resetBtn" class="control-btn" disabled>Reset</button>
+                <button id="pauseBtn" class="control-btn" disabled>Pause</button>
+            </div>
+        </div>
+
+        <div class="result-modal" id="resultModal">
+            <div class="modal-content">
+                <h2>Test Complete!</h2>
+                <div class="final-stats">
+                    <p>WPM: <span id="finalWpm">0</span></p>
+                    <p>Accuracy: <span id="finalAccuracy">0%</span></p>
+                    <p>Errors: <span id="finalErrors">0</span></p>
+                    <p>Characters: <span id="finalChars">0</span></p>
+                </div>
+                <button id="closeModal" class="control-btn">Close</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
